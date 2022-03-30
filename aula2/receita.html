@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - forma de utilizar</title>
+    <link rel="stylesheet" href="css/receita.css"> <!--Externo -> Menor prioridade-->
+    <style>
+        div {
+          height: 100px; 
+          width: 150px; 
+          background-color: blue;
+        }
+    </style><!--Incorporado -> Segunda prioridade do CSS-->
+</head>
+<body>
+    <div class="caixa-1" style="background-color: gray;"></div><!--Inline -> Maior prioridade do CSS-->
+</body>
+</html>

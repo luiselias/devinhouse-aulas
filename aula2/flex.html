@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: gray;
+            height: 600px;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .container:hover {
+            width: 250px;
+        }
+        .item-a, .item-b {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border: 2px solid black;
+        }
+
+        .item-b {
+            background-color: blue; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item-a"></div>
+        <div class="item-b"></div>
+        <div class="item-a"></div>
+        <div class="item-b"></div>
+
+    </div>
+</body>
+</html>
