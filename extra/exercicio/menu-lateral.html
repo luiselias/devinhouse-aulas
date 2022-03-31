@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area-que-aparece</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    .projeto-de-menu {
+        position: absolute;
+        height: 400px;
+        width: 200px;
+        left: -200px;
+        background-color: bisque;
+        transition: 0.5s;
+    }
+
+    .ativa-menu {
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+    }
+
+    .ativa-menu:hover +.projeto-de-menu, .projeto-de-menu:hover   {
+        left: 0;
+    }
+
+    .outro-lugar {
+        position: absolute;
+        left: 300px;
+        top: 200px;
+        height: 300px;
+        width: 300px;
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    .outro-lugar:hover .menu {
+        bottom: 0;
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+        height: 100px;
+        width: 200px;
+        background-color: yellow;  
+        transition: 0.5s;      
+    }
+</style>
+<body>
+    <div class="ativa-menu"></div>
+    <aside class="projeto-de-menu">
+
+    </aside>
+
+    <div class="outro-lugar">
+        <div class="menu"></div>
+    </div>
+
+</body>
+</html>
