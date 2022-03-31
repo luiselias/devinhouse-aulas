@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .show-menu {
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+        }
+
+        .menu-1 {
+            height: 200px;
+            width: 100px;
+            background-color: burlywood;
+            position: absolute;
+            left: -100px;
+            transition: 0.5s;
+        }
+
+        .show-menu:hover + .menu-1, .menu-1:hover {
+            left: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .central {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-2 {
+            height: 100px;
+            width: 150px;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            bottom: -100px;
+            transition: 0.5s;
+        }
+
+        .central:hover > .menu-2 {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="show-menu"></div>
+    <div class="menu-1"></div>
+
+    <div class="container">
+        <div class="central">
+            <div class="menu-2"></div>
+        </div>
+    </div>
+</body>
+</html>
