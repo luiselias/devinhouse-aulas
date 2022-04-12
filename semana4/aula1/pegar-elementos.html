@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegar elementos</title>
+</head>
+<body>
+    <div id="id1" class="classe1 comum" name="nome1"></div>
+    <div id="id2" class="classe2" name="nome2"></div>
+    <div id="id3" class="classe3 comum" name="nome3"></div>
+    <div id="id4" class="classe4" name="nome4"></div>
+    <div id="id5" class="classe5" name="nome5"></div>
+    <div id="id6" class="classe6" name="nome6"></div>
+
+    <script>
+        const div5 = document.getElementById('id5');
+        div5.innerHTML = '<span> um teste bacana </span>';
+
+        const porClasse = document.getElementsByClassName('comum');
+        console.log(porClasse);
+        porClasse[0].innerText = 'Por classe 1';
+
+        const div3 = document.getElementsByName('nome3');
+        div3[0].innerText = 'Div3';
+
+        const divs = document.getElementsByTagName('div');
+        console.log(divs);
+
+        const divsComQuerySelector = document.querySelector('div');
+        console.log('Com querySelector', divsComQuerySelector);
+
+        const divsComQuerySelectorAll = document.querySelectorAll('div');
+        console.log('Com querySelectorAll', divsComQuerySelectorAll);
+    </script>
+</body>
+</html>

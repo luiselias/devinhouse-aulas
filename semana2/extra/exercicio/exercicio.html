@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 15px;
+            background-color: #e1e1e1;
+            height: 100vh;
+        }
+
+        header {
+            height: 120px   ;
+            position: relative;
+        }
+
+        .apresentacao {
+            height: 100px;
+            width: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .foto {
+            height: 100px;
+            top: 0;
+            border-radius: 12Px;
+            box-shadow: 2px 7px 6px rgb(0 0 0 / 30%);
+        }
+
+        .perfil {
+            height: 100px;
+            width: 450px;
+            right: 25px;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 7px 6px rgb(0 0 0 / 30%);
+        }
+
+        .perfil>p {
+            margin: 10px;
+        }
+
+        main {
+            height: 400px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .linha-1,
+        .linha-2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .academia,
+        .experiencia {
+            height: 180px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 2px 7px 6px rgb(0 0 0 / 30%);
+        }
+
+        .academia p,
+        .experiencia p {
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .skills {
+            height: 180px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 2px 7px 6px rgb(0 0 0 / 30%);
+            box-sizing: border-box;
+            padding: 10px 0 0 30px;
+        }
+
+        dt {
+            font-weight: 700;
+        }
+
+        dd {
+            margin-inline-start: 15px;
+        }
+
+        footer {
+            height: 60px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        footer img {
+            height: 30px;
+            padding: 10px 0 0 25px;
+        }
+
+        .conteudo {
+            width: 600px;
+            height: 585px;
+            background-color: white;
+            box-shadow: 2px 7px 6px rgb(0 0 0 / 30%);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-left: 4px solid orange;
+        }
+
+        ul span {
+            padding-left: 15px;
+        }
+
+        hr {
+            margin: 0;
+        }
+
+        .nome {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="conteudo">
+        <header>
+            <section class="apresentacao">
+                <img src="imgs/luis.png" class="foto" alt="Minha foto">
+                <section class="perfil">
+                    <p class="nome">Luis Carlos Elias</p>
+                    <p>Fiure amet sapiente impedit quae nam vitae officiis totam ipsa quia dolore sunt optio nostrum
+                        officia?</p>
+                </section>
+            </section>
+        </header>
+        <hr>
+        <main>
+            <div class="linha-1">
+                <section class="academia">
+                    <p>Formação Acadêmica</p>
+                    <ul>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                    </ul>
+                </section>
+                <section class="experiencia">
+                    <p>Experiência profissional</p>
+                    <ul>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                        <li><span>Instituição b</span></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="linha-2">
+                <section class="skills">
+                    <dl>
+                        <dt>skill a</dt>
+                        <dd>Algumas coisas sobre a skill a que podem ser bem legais e tals</dd>
+                    </dl>
+                    <dl>
+                        <dt>skill a</dt>
+                        <dd>Algumas coisas sobre a skill a que podem ser bem legais e tals</dd>
+                    </dl>
+                    <dl>
+                        <dt>skill a</dt>
+                        <dd>Algumas coisas sobre a skill a que podem ser bem legais e tals</dd>
+                    </dl>
+                </section>
+            </div>
+        </main>
+        <hr>
+        <footer>
+            <nav class="contatos">
+                <a href="#"><img src="imgs/email.png" alt="email"></a>
+            </nav>
+        </footer>
+    </section>
+</body>
+
+</html>

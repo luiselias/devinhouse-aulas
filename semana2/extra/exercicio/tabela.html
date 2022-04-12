@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+    <style>
+        table {
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+        }
+        
+        tbody tr:nth-of-type(odd) {
+            background-color: #e1e1e1;
+        }
+
+        td, th {
+            padding: 1em;
+        }
+
+        tfoot tr, thead, [colspan="2"], [rowspan="3"] {
+            background-color: #333;
+            color: #fff;
+        }
+
+        section {
+            margin: 50px 25px 50px 25px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <section class="tabela-simples">
+        <p>Tabela Simples</p>
+        <table>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </table>
+    </section>
+    <section class="tabela-mescla-coluna">
+        <p>Tabela com mescla de colunas</p>
+        <table>
+            <tr>
+                <td colspan="2">A</td>                
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </table>
+    </section>
+    <section class="tabela-mescla-linha">
+        <p>Tabela com mescla de linhas</p>
+        <table>
+            <tr>
+                <td>A</td>                
+                <td>B</td>                
+                <td>C</td>
+            </tr>
+            <tr>
+                <td rowspan="3">A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>                
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>                
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </table>
+    </section>
+    <section class="tabela-power">
+        <p>Tabela complexa</p>
+        <table>
+            <caption>Uma boa tabela</caption>
+            <thead>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A1</td>
+                    <td>B1</td>
+                    <td>C1</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>C2</td>
+                </tr>
+                <tr>
+                    <td>A3</td>
+                    <td>B3</td>
+                    <td>C3</td>
+                </tr>                
+            </tbody>
+            <tfoot>
+                <td colspan="3">Rodapé</td>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>

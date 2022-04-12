@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header com imagem</title>
+    <style>
+        .foto {
+            height: 100px;
+            border-radius: 10px;
+            margin-left: 25px;
+        }
+
+        .minha-historia {
+            height: 100px;
+            background-color: gray;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0 25px 0 25px;
+            border-radius: 10px;
+        }
+
+        header {
+            height: 150px;
+            background-color: lightgrey;
+            display: flex;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px;
+        }
+
+        .formacao, .experiencia {
+            background-color: lightgray;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        dt {
+            font-weight: 800;
+        }
+        
+        .itens-formacao {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="apresentacao">
+        <img class="foto" src="imgs/luis.jpg" alt="Minha Foto">
+        <section class="minha-historia">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, blanditiis reprehenderit. Deserunt
+                dolorem esse rem, tempora nobis ab dolore autem repudiandae recusandae incidunt harum voluptatibus
+                pariatur vel. Porro, voluptatibus modi.
+            </p>
+        </section>
+    </header>
+    <main class="conteudo">
+        <section class="formacao">
+            <ul class="itens-formacao">
+                <li>Alguma coisa</li>
+                <li>Alguma coisa</li>
+                <li>Alguma coisa</li>
+                <li>Alguma coisa</li>
+                <li>Alguma coisa</li>
+            </ul>
+        </section>
+
+        <section class="experiencia">
+            <dl class="itens-experiencia">
+                <dt>Meu primeiro emprego</dt>
+                <dd>Eu fazia isso, aquilo e aquilo lá também</dd>
+            </dl>
+            <dl class="itens-experiencia">
+                <dt>Meu primeiro emprego</dt>
+                <dd>Eu fazia isso, aquilo e aquilo lá também</dd>
+            </dl>
+            <dl class="itens-experiencia">
+                <dt>Meu primeiro emprego</dt>
+                <dd>Eu fazia isso, aquilo e aquilo lá também</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            Desenvolvido por <span>Luis Carlos Elias</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
