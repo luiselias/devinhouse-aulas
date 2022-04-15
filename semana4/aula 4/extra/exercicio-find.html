@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find</title>
+</head>
+
+<body>
+    <div class="area"></div>
+    <input type="number" class="nota">
+    <button onclick=buscar()>Buscar filme</button>
+
+    <script>
+
+        function pegarNota() {
+            const nota = document.querySelector('.nota');
+            return nota.value;
+        }
+
+        function filtrarFilmePor(nota) {
+            const filmes = [
+                {
+                    titulo: 'Batman',
+                    nota: 7,
+                },
+                {
+                    titulo: 'Logan',
+                    nota: 8,
+                },
+                {
+                    titulo: 'O poderoso chefão',
+                    nota: 8,
+                },
+            ];
+
+            return filmes.find(function (elemento) {
+                return elemento.nota >= nota;
+            });
+        }
+
+        function criarCardPara(filme) {
+            const containerFilme = document.createElement('div');
+
+            const nomeFilme = document.createElement('h1');
+            nomeFilme.innerText = `Titulo: ${filme.titulo}`;
+
+            const notaFilme = document.createElement('h2');
+            notaFilme.innerText = `Nota: ${filme.nota}`;
+
+            containerFilme.appendChild(nomeFilme);
+            containerFilme.appendChild(notaFilme);
+
+            return containerFilme;
+        }
+
+        function mostrarFilmeSelecionado(filme) {
+            if (!filme) {
+                return;
+            }
+
+            const areaFilmes = document.querySelector('.area');
+            const cardFilme = criarCardPara(filme);
+            areaFilmes.appendChild(cardFilme);
+        }
+
+        function limparAreaFilme() {
+            const areaFilmes = document.querySelector('.area');
+            areaFilmes.innerText = '';
+        }
+
+        function buscar() {
+            limparAreaFilme();
+            const nota = pegarNota();
+            const filme = filtrarFilmePor(nota);
+
+            mostrarFilmeSelecionado(filme);
+        }
+    </script>
+</body>
+
+</html>

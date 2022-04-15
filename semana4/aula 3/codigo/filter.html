@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+    <div class="areaDosFilmes"></div>
+    <input type="number" placeholder="Coloque a nota do filme" class="nota"><br>
+    <button onclick=mostrarResultado()>Filtrar</button>
+    <script>
+        function pegarNotaParaFiltrar() {
+            const nota = document.querySelector('.nota');
+            return nota.value;
+        }
+
+        function buscarFilmesComNotaIgualOuSuperiorA(nota) {
+            const filmes = [
+                {
+                    nome: 'A fera',
+                    nota: 8,
+                },
+                {
+                    nome: 'Eu sou lenda',
+                    nota: 10,
+                },
+                {
+                    nome: 'Filme do pelé',
+                    nota: 7,
+                },
+            ];
+            return filmes.filter(function (filme) {
+                return filme.nota >= nota;
+            });
+        }
+
+        function criarQuadradoDoFilme(filme) {
+            const container = document.createElement('div');
+
+            const nomeDoFilme = document.createElement('h1');
+            nomeDoFilme.innerText = `Titulo: ${filme.nome}`;
+
+            const notaFilme = document.createElement('h2');
+            notaFilme.innerText = `Nota: ${filme.nota}`;
+
+            container.appendChild(nomeDoFilme);
+            container.appendChild(notaFilme);
+
+            return container;
+        }
+
+        function limparArea() {
+            const areaDosFilmes = document.querySelector('.areaDosFilmes');
+            areaDosFilmes.innerText = '';
+        }
+
+        function mostrarResultado() {
+            limparArea();
+            const nota = pegarNotaParaFiltrar();
+            const filmesComNota = buscarFilmesComNotaIgualOuSuperiorA(nota);
+
+            const areaDosFilmes = document.querySelector('.areaDosFilmes');
+
+            filmesComNota.forEach(function (filme) {
+                const quadradoDoFilme = criarQuadradoDoFilme(filme);
+                areaDosFilmes.appendChild(quadradoDoFilme);
+            })
+
+        }
+    </script>
+</body>
+
+</html>

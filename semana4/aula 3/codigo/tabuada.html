@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+    <select name="tabuada" id="tabuada" onchange=alteraTabuada()>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+    <section class="resultado">
+
+    </section>
+
+    <script>
+
+
+        function calculaTabuada(multiplicador) {
+            const valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            return valores.map(function (valor) {
+                return `${multiplicador} x ${valor} = ${valor * multiplicador}`;
+            });
+        }
+
+        function exibeTabuada(multiplicador) {
+            const tabuada = calculaTabuada(multiplicador);
+
+            const areaDeResultado = document.querySelector('.resultado');
+            areaDeResultado.innerText = '';
+            const titulo = document.createElement('h1');
+            titulo.innerText = `TABUADA DE ${multiplicador}`;
+            areaDeResultado.appendChild(titulo);
+
+            tabuada.forEach(function (calculo) {
+                const linha = document.createElement('h2');
+                linha.innerText = calculo;
+                areaDeResultado.appendChild(linha);
+            });
+        }
+
+        function alteraTabuada() {
+            const multiplicador = document.querySelector('#tabuada');
+            exibeTabuada(multiplicador.value);
+        }
+
+        exibeTabuada(1);
+    </script>
+</body>
+
+</html>

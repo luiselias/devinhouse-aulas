@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício um</title>
+    <style>
+        div {
+            width: 300px;
+            height: 250px;
+            background-color: lavender;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 300px;
+        }
+
+        div,
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button onclick=mostrarFilmes()>Mostrar meus filmes favoritos</button><br>
+    <button onclick=mostrarLivros()>Mostrar meus livros favoritos</button>
+
+    <script>
+
+        function criaElemento(tag, texto) {
+            const elemento = document.createElement(tag);
+            elemento.innerText = texto;
+            return elemento;
+        }
+
+        function limpaPai() {
+            const divPai = document.querySelector('div');
+            divPai.innerText = '';
+        }
+
+        function criaTitulo(texto) {
+            const titulo = criaElemento('h1', texto);
+
+            const divPai = document.querySelector('div');
+            divPai.appendChild(titulo);
+        }
+
+        function criaLista(arrayDeNomes) {
+            const lista = document.createElement('ol');
+
+            for (let index = 0; index < arrayDeNomes.length; index++) {
+                const nome = arrayDeNomes[index];
+                const item = criaElemento('li', nome);
+                lista.appendChild(item);
+            }
+
+            const divPai = document.querySelector('div');
+            divPai.appendChild(lista);
+        }
+
+        function mostrarFilmes() {
+            limpaPai();
+            criaTitulo('Meus Filmes');
+            criaLista(['O poderoso Chefão', 'Os Goonies', 'Inidiana Jones', 'Matrix']);
+        }
+
+        function mostrarLivros() {
+            limpaPai();
+            criaTitulo('Meus Livros');
+            criaLista(['O mundo de Sofia', 'A viagem de Theo', 'Deuses amaericanos']);
+        }
+    </script>
+</body>
+
+</html>

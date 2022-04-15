@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fors</title>
+</head>
+
+<body>
+    
+
+    <script>
+        const array = [1,2,,,,6];
+        const objeto = {
+            nome: 'Luis Carlos',
+            idade: 44,
+            sexo: 'M',
+        };
+
+        function forTradicional () {
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                console.log('For tradicional', element);
+            }
+            console.log('For tradicional tamanho', array.length);                
+        }
+
+        function forOf() {
+            for (const element of array) {
+                console.log('For...of', element);
+            }
+            console.log('For...of tamanho', array.length);
+        }
+
+        function forIn () {
+            for (const index in array) {
+                const element = array[index];
+                console.log('For IN arrays', element);
+            }
+            console.log('For IN arrays tamanho', array.length);
+
+            for (const atributo in objeto) {
+                const valor = objeto[atributo];
+                console.log('For in objeto', atributo, valor);
+            }
+        }
+
+        function imprimeElemento(elemento, indice) {
+            console.log('ForEach', indice, elemento);
+        }
+
+        function forEach() {
+            array.forEach(imprimeElemento);
+        }
+
+        forTradicional();
+        forOf();
+        forIn();
+        forEach();
+    </script>
+       
+
+</body>
+
+</html>

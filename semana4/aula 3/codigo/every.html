@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every</title>
+</head>
+
+<body>
+
+    <script>
+        const alunos = [
+            {
+                nome: 'Luis',
+                idade: 44,
+                sexo: 'M',
+            },
+            {
+                nome: 'José',
+                idade: 18,
+                sexo: 'M',
+            },
+            {
+                nome: 'Maria',
+                idade: 21,
+                sexo: 'F',
+            },
+        ]
+
+        const maioresDeIdade = alunos.every(function (aluno) {
+            return aluno.idade >= 18;
+        });
+
+        const todosDoSexoMasculino = alunos.every(function (aluno) {
+            return aluno.sexo === 'M';
+        });
+
+        console.log('São todos maiores de idade: ', maioresDeIdade);
+        console.log('São todos do sexo masculino:', todosDoSexoMasculino);
+    </script>
+</body>
+
+</html>

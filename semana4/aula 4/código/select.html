@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <select name="multiplicador" id="multiplicador" onchange=calcularTabuada()>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <script>
+        function pegarMultiplicador() {
+            const multiplicador = document.querySelector('#multiplicador');
+            return multiplicador.value;
+        }
+
+        function calcularTabuada() {
+            const multiplicador = pegarMultiplicador();
+            alert(multiplicador);
+        }
+    </script>
+</body>
+</html>
