@@ -1,0 +1,27 @@
+@media only screen and (max-width: 400px) {
+    .logo {
+       position: absolute;
+       left: 0;
+       top: 0;
+       height: 100px;
+       width: 60%;
+       padding-left: 20%;
+    }
+
+    .logo-img {
+        height: 100px;
+        width: none;
+    }
+
+    .titulo {
+        display: none;
+    }
+    
+    .formulario {
+        width: 100%;
+    }
+
+    .formulario-campos {
+        padding-top: 120px;
+    }
+  }
