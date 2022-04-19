@@ -26,6 +26,9 @@ body {
 
 .logo {
     background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .logo-img {

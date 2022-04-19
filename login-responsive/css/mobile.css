@@ -13,6 +13,10 @@
         width: none;
     }
 
+    .logo-texto {
+        display: none;
+    }
+
     .titulo {
         display: none;
     }
