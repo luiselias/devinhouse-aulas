@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo código procedural</title>
+</head>
+<body>
+    
+    <script>
+        let nomeAluno1 = 'Luis Carlos'
+        let idadeAluno1 = 44;
+        let turmaAluno1 = '6A';
+       
+        let nomeAluno2 = 'Maria da Silva'
+        let idadeAluno2 = 25;
+        let turmaAluno2 = '2B';
+
+        let nomeAluno3 = 'Geraldo Azevedo'
+        let idadeAluno3 = 18;
+        let turmaAluno3 = '3B';
+       
+        const aluno1 = document.createElement('span');
+        aluno1.innerText = `Meu nome é ${nomeAluno1}, minha idade é ${idadeAluno1} anos e estou na turma ${turmaAluno1}\n`;
+        
+        const aluno2 = document.createElement('span');
+        aluno2.innerText = `Meu nome é ${nomeAluno2}, minha idade é ${idadeAluno2} anos e estou na turma ${turmaAluno2}\n`;
+
+        const aluno3 = document.createElement('span');
+        aluno3.innerText = `Meu nome é ${nomeAluno3}, minha idade é ${idadeAluno3} anos e estou na turma ${turmaAluno3}\n`;
+
+        const pai = document.querySelector('body');
+        pai.appendChild(aluno1);
+        pai.appendChild(aluno2);
+        pai.appendChild(aluno3);
+    </script>
+</body>
+</html>
